@@ -1,5 +1,3 @@
-# React-WebPack
-A extremely basic WebPack/React starter kit. Comes with the bare necesseties required to run React with WebPack as the module loader.
+# Laterooms Search
 
-# How to run
-npm run dev
+Basic laterooms search functionality built with React and Flux
