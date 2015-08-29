@@ -5,26 +5,11 @@ var SearchComponent = require('./searchComponent');
 var SearchResultsComponent = require('./SearchResultsComponent');
 
 module.exports = React.createClass({
-    triggerAction: function() {
+    _triggerAction() {
         userActions.search();
     },
-    getInitialState: function() {
-        return {
-            loading: false,
-            results: []
-        }
-    },
-    componentWillMount: function() {
 
-        let _this = this;
-        searchStore.on('change',() => {
-            _this.setState({
-                loading: searchStore.isLoading(),
-                results: _this.setSearchResults(searchStore.getSearchResults())
-            })
-        });
-    },
-    setSearchResults: function(response) {
+    _setSearchResults(response) {
         if (!response.results) {
             return '';
         }
@@ -32,7 +17,25 @@ module.exports = React.createClass({
         return response.results.hotels;
     },
 
-    render: function() {
+    getInitialState() {
+        return {
+            loading: false,
+            results: []
+        }
+    },
+    
+    componentWillMount() {
+
+        let _this = this;
+        searchStore.on('change', () => {
+            _this.setState({
+                loading: searchStore.isLoading(),
+                results: _this.setSearchResults(searchStore.getSearchResults())
+            })
+        });
+    },
+
+    render() {
         return (
             <div>
                 <SearchComponent loading={this.state.loading}/>

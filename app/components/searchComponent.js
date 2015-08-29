@@ -3,14 +3,14 @@ var actions = require('../actions/userActions')
 var debounce = require('../utils/debounce');
 
 module.exports = React.createClass({
-    onChange: function(e) {
+    _onChange(e) {
         if (e.target.value) {
             actions.search({
                 query: e.target.value
             });
         }
     },
-    render: function() {
+    render() {
 
         let _this = this;
 
