@@ -1,3 +1,4 @@
 module.exports = {
-    ACTION_NAME: 'ACTION_NAME'
+    SEARCH: 'SEARCH',
+    RECEIVE_DATA: 'RECEIVE_DATA'
 };

@@ -1,11 +1,13 @@
 var dispatcher = require('../dispatchers/dispatcher.js');
 var constants = require('../constants/constants.js');
+var appApi = require('./api');
 
 module.exports = {
-    actionName: function (payload) {
+    search: function (payload) {
         dispatcher.handleAction({
-            actionType: constants.ACTION_NAME,
+            actionType: constants.SEARCH,
             action: payload
         });
+        appApi.search.get(payload.query);
     }
 };

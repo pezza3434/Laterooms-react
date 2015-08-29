@@ -12,16 +12,15 @@ var config = {
         loaders: [{
             test: /\.js$/,
             loader: 'jsx-loader'
-        },
-        {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel',
-        query: {
-          optional: ['runtime'],
-          stage: 0
-        }
-      }]
+        }, {
+            test: /\.jsx?$/,
+            exclude: /(node_modules|bower_components)/,
+            loader: 'babel',
+            query: {
+                optional: ['runtime'],
+                stage: 0
+            }
+        }]
     }
 };
 
