@@ -14,7 +14,7 @@ module.exports = React.createClass({
 
         let _this = this;
 
-        let onChange = debounce(() => {
+        let onChange = debounce(ev => {
             _this.onChange(ev);
         });
 
