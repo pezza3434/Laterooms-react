@@ -3,11 +3,10 @@ var HotelCard = require('./hotelCard');
 
 module.exports = React.createClass({
     render: function () {
-        var hotels = [];
-        this.props.hotels.forEach(function (hotel) {
-            console.log(hotel);
-            hotels.push(<HotelCard key={hotel.id} hotel={hotel}></HotelCard>)
-        });
+        let hotels = [];
+
+        this.props.hotels.forEach(hotel => hotels.push(<HotelCard key={hotel.id} hotel={hotel}></HotelCard>));
+
         return (
             <div>
                 {hotels}

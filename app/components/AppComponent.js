@@ -15,9 +15,9 @@ module.exports = React.createClass({
         }
     },
     componentWillMount: function() {
-        var _this = this;
 
-        searchStore.on('change', function(action) {
+        let _this = this;
+        searchStore.on('change',() => {
             _this.setState({
                 loading: searchStore.isLoading(),
                 results: _this.setSearchResults(searchStore.getSearchResults())
@@ -36,7 +36,9 @@ module.exports = React.createClass({
         return (
             <div>
                 <SearchComponent loading={this.state.loading}/>
-                {this.state.results ? <SearchResultsComponent hotels={this.state.results}/> : ''}
+                {this.state.results
+                    ? <SearchResultsComponent hotels={this.state.results}/>
+                    : ''}
             </div>
         );
     }

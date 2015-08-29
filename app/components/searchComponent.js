@@ -12,9 +12,9 @@ module.exports = React.createClass({
     },
     render: function() {
 
-        var _this = this;
+        let _this = this;
 
-        var onChange = debounce(function(ev) {
+        let onChange = debounce(() => {
             _this.onChange(ev);
         });
 
