@@ -20,6 +20,12 @@ var config = {
                 optional: ['runtime'],
                 stage: 0
             }
+        }, {
+            test: /\.css$/,
+            loader: "style-loader!css-loader"
+        }, {
+            test: /\.(ttf|eot|svg|woff2|woff)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+            loader: "file-loader"
         }]
     }
 };
