@@ -15,15 +15,15 @@ module.exports = React.createClass({
         let _this = this;
 
         let onChange = debounce(ev => {
-            _this.onChange(ev);
+            _this._onChange(ev);
         });
 
         return (
             <div>
-                <input onChange={onChange} type="text"/>
+                <input className="form-control" placeholder="Text input" onChange={onChange} type="text"/>
                 {this.props.loading
-                    ? <div>loading!!</div>
-                    : <div>not loading</div>}
+                    ? <div className="loading">loading!!</div>
+                : ''}
             </div>
         )
     }

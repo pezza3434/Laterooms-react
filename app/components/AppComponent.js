@@ -23,14 +23,14 @@ module.exports = React.createClass({
             results: []
         }
     },
-    
+
     componentWillMount() {
 
         let _this = this;
         searchStore.on('change', () => {
             _this.setState({
                 loading: searchStore.isLoading(),
-                results: _this.setSearchResults(searchStore.getSearchResults())
+                results: _this._setSearchResults(searchStore.getSearchResults())
             })
         });
     },

@@ -16,10 +16,12 @@ module.exports = React.createClass({
         } = this.props.hotel;
 
         return (
-            <div className="hotel">
+            <div className="hotel col-md-4">
                 <div className="hotel__image"><img src={img}/></div>
-                <div className="hotel__name">{name}</div>
-                <div className="hotel__price">{includingTax}</div>
+                <div className="hotel__details">
+                    <div className="hotel__name">{name}</div>
+                    <div className="hotel__price">£{includingTax}</div>
+                </div>
             </div>
         )
     }
