@@ -1,0 +1,40 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin-top:50px;
+}
+
+.loading {
+    background: green;
+    color: #fff;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    top: 0;
+    right: 0;
+    padding: 6px;
+    left: 0;
+    border-radius: 0px 0px 4px 4px;
+    position: absolute;
+}
+
+.hotel {
+    margin: 10px 0px;
+}
+
+.hotel__details {
+    background: #ECECEC;
+    padding: 11px;
+}
+
+.hotel img {
+    width: 100%;
+}
+
+.form-control {
+    box-shadow:none;
+}
+
+.form-control:focus {
+    box-shadow:none;
+    border-color:#B5B5B5;
+}
