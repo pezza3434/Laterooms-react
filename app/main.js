@@ -1,3 +1,7 @@
 var React = require('react');
 var AppComponent = require('./components/AppComponent.js');
-React.render(<AppComponent/>, document.body);
+require('bootstrap/dist/css/bootstrap.css');
+require('bootstrap/dist/css/bootstrap-theme.css');
+require('./components/style.css');
+
+React.render(<AppComponent/>, document.getElementById('reactapp'));
