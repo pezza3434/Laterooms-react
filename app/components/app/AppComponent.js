@@ -1,8 +1,11 @@
 var React = require('react');
-var searchStore = require('../stores/searchStore');
-var userActions = require('../actions/userActions');
-var SearchComponent = require('./searchComponent');
-var SearchResultsComponent = require('./SearchResultsComponent');
+var searchStore = require('../../stores/searchStore');
+var userActions = require('../../actions/userActions');
+var SearchComponent = require('../search/searchComponent');
+var SearchResultsComponent = require('../search/SearchResultsComponent');
+require('bootstrap/dist/css/bootstrap.css');
+require('bootstrap/dist/css/bootstrap-theme.css');
+require('./style.css');
 
 module.exports = React.createClass({
     _triggerAction() {

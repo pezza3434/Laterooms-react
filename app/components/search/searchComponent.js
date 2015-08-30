@@ -1,6 +1,7 @@
 var React = require('react');
-var actions = require('../actions/userActions')
-var debounce = require('../utils/debounce');
+var actions = require('../../actions/userActions')
+var debounce = require('../../utils/debounce');
+require('./style.css')
 
 module.exports = React.createClass({
     _onChange(e) {
@@ -19,7 +20,7 @@ module.exports = React.createClass({
         });
 
         return (
-            <div>
+            <div className="col-md-12">
                 <input className="form-control" placeholder="Text input" onChange={onChange} type="text"/>
                 {this.props.loading
                     ? <div className="loading">loading!!</div>

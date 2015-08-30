@@ -14,20 +14,7 @@ body {
     padding: 6px;
     left: 0;
     border-radius: 0px 0px 4px 4px;
-    position: absolute;
-}
-
-.hotel {
-    margin: 10px 0px;
-}
-
-.hotel__details {
-    background: #ECECEC;
-    padding: 11px;
-}
-
-.hotel img {
-    width: 100%;
+    position: fixed;
 }
 
 .form-control {
