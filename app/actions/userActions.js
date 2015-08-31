@@ -9,5 +9,11 @@ module.exports = {
             action: payload
         });
         appApi.search.get(payload.query);
+    },
+    addFavourite: function (payload) {
+        dispatcher.handleAction({
+            actionType: constants.ADD_FAVOURITE,
+            hotel: payload
+        });
     }
 };

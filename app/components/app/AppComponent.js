@@ -1,8 +1,10 @@
 var React = require('react');
 var searchStore = require('../../stores/searchStore');
+var favouritesStore = require('../../stores/favouritesStore');
 var userActions = require('../../actions/userActions');
 var SearchComponent = require('../search/searchComponent');
 var SearchResultsComponent = require('../search/SearchResultsComponent');
+var FavouritesComponent = require('../favourites/FavouritesComponent');
 require('bootstrap/dist/css/bootstrap.css');
 require('bootstrap/dist/css/bootstrap-theme.css');
 require('./style.css');
@@ -23,7 +25,8 @@ module.exports = React.createClass({
     getInitialState() {
         return {
             loading: false,
-            results: []
+            results: [],
+            favourites: []
         }
     },
 
@@ -33,8 +36,13 @@ module.exports = React.createClass({
         searchStore.on('change', () => {
             _this.setState({
                 loading: searchStore.isLoading(),
-                results: _this._setSearchResults(searchStore.getSearchResults())
+                results: _this._setSearchResults(searchStore.getSearchResults()),
             })
+        });
+        favouritesStore.on('change', () => {
+            _this.setState({
+                favourites: favouritesStore.getFavourites()
+            });
         });
     },
 
@@ -42,9 +50,8 @@ module.exports = React.createClass({
         return (
             <div>
                 <SearchComponent loading={this.state.loading}/>
-                {this.state.results
-                    ? <SearchResultsComponent hotels={this.state.results}/>
-                    : ''}
+                {this.state.results ? <SearchResultsComponent hotels={this.state.results}/> : ''}
+                <FavouritesComponent favourites={this.state.favourites}/>
             </div>
         );
     }

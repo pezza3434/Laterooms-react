@@ -1,0 +1,21 @@
+.favourites {
+    position: fixed;
+    top: 13px;
+    background: #ececec;
+    padding: 0px 13px 13px 13px;
+    right: 20px;
+    border-radius: 2px;
+}
+
+.favourites h4 {
+    font-weight:lighter;
+}
+
+.favourites ul {
+    list-style:none;
+}
+
+.favourites ul {
+    margin:0;
+    padding:0;
+}
