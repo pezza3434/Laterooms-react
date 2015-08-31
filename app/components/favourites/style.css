@@ -5,6 +5,7 @@
     padding: 0px 13px 13px 13px;
     right: 20px;
     border-radius: 2px;
+
 }
 
 .favourites h4 {
@@ -18,4 +19,14 @@
 .favourites ul {
     margin:0;
     padding:0;
+}
+
+.favourites-list-enter {
+    opacity:0;
+    transition: all 600ms ease;
+
+}
+
+.favourites-list-enter-active{
+    opacity:1;
 }

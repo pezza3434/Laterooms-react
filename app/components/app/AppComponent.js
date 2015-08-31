@@ -50,8 +50,8 @@ module.exports = React.createClass({
         return (
             <div>
                 <SearchComponent loading={this.state.loading}/>
-                {this.state.results ? <SearchResultsComponent hotels={this.state.results}/> : ''}
-                <FavouritesComponent favourites={this.state.favourites}/>
+                {this.state.results.length ? <SearchResultsComponent hotels={this.state.results}/> : ''}
+                {this.state.favourites.length ? <FavouritesComponent favourites={this.state.favourites}/> : ''}
             </div>
         );
     }
